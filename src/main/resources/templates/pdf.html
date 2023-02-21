@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="de" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Docs</title>
+    <style>
+        header {
+            border-bottom: 1px solid #ddd;
+            margin-bottom: 15px;
+            background-color: #0f0;
+            color: #ff0;
+        }
+
+        footer {
+            border-top: 1px solid #ddd;
+            margin-top: 15px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1 th:text="${doc.header}"></h1>
+        <h2 th:text="${doc.author}"></h2>
+    </header>
+    <main>
+        <th:block th:text="${doc.body}"></th:block>
+    </main>
+    <footer th:text="${doc.footer}"></footer>
+
+</body>
+</html>
